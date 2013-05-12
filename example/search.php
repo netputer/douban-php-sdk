@@ -3,16 +3,10 @@
   require('../src/DoubanOAuth.php');
   require('config.php');
 
-  // $douban = new DoubanOAuth();
-
-  $douban = new DoubanOAuth(array(
-    'key' => KEY,
-    'secret' => SECRET,
-    'access_token' => ACCESS,
-  ));
+  $douban = new DoubanOAuth();
 
   $result = $douban->get('book/search', array(
-   'q' => 'PHP',
+   'q' => $_GET['q'],
   ));
 
   var_dump($douban->http_code, $result);

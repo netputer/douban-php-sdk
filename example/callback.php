@@ -12,3 +12,7 @@
   $result = $douban->getAccessToken($_GET['code']);
 
   var_dump($_GET['state'], $result);
+
+  $result = $douban->get('user/~me');
+
+  var_dump($result);

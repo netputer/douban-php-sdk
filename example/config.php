@@ -6,5 +6,3 @@
 
   define('SCOPE', 'douban_basic_common,book_basic_r,book_basic_w');
   define('STATE', 'Something');
-
-  define('ACCESS', 'Your Access Token');
