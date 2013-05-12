@@ -69,19 +69,19 @@
       return $result;
     }
 
-    public function get($resource, $params) {
+    public function get($resource, $params = array()) {
       return $this->oAuthRequest('GET', $resource, $params);
     }
 
-    public function post($resource, $params) {
+    public function post($resource, $params = array()) {
       return $this->oAuthRequest('POST', $resource, $params);
     }
 
-    public function put($resource, $params) {
+    public function put($resource, $params = array()) {
       return $this->oAuthRequest('PUT', $resource, $params);
     }
 
-    public function delete($resource, $params) {
+    public function delete($resource, $params = array()) {
       return $this->oAuthRequest('DELETE', $resource, $params);
     }
 
