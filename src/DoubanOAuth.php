@@ -132,8 +132,8 @@
           break;
 
         case 'PUT':
+          $options[CURLOPT_CUSTOMREQUEST] = 'PUT';
           $options[CURLOPT_POSTFIELDS] = $params;
-          $headers[] = 'X-HTTP-Method-Override: PUT';
           break;
 
         case 'DELETE':
