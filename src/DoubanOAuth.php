@@ -150,7 +150,7 @@
 
       $result = curl_exec($ch);
       $this->http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-var_dump($result);exit;
+
       curl_close($ch);
 
       return json_decode($result, TRUE);
