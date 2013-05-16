@@ -7,15 +7,16 @@
 
 用法
 -----
-1. 直接调用不需要授权的公开 API
+1. Clone 或下载项目源码，本机调试或上传至服务器。
+
+2. 直接调用不需要授权的公开 API
 
   通过浏览器访问 `search.php?q=PHP` 即可搜索 PHP 相关书籍的内容。
 
-2. 通过授权方式使用
+3. 通过授权方式使用
 
-  1. Clone 或下载项目源码。
-  2. 打开 `example/config.php` 文件，将常量 `KEY` `SECRET` 的值分别修改成你在豆瓣创建的应用的 `API Key` 和 `Secret` 。
-  3. 通过浏览器访问 `connect.php` 进行授权。授权成功后将跳转至 `callback.php` 显示授权信息和用户信息。
+  1. 打开 `example/config.php` 文件，将常量 `KEY` `SECRET` 的值分别修改成你在豆瓣创建的应用的 `API Key` 和 `Secret` 。
+  2. 通过浏览器访问 `connect.php` 进行授权。授权成功后将跳转至 `callback.php` 显示授权信息和用户信息。
 
 TODO
 -----
