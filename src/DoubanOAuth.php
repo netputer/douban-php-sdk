@@ -73,6 +73,24 @@
       $this->access_token = $token;
     }
 
+    public function refreshToken($token) {
+      $params = array(
+        'client_id' => $this->client_key,
+        'client_secret' => $this->client_secret,
+        'redirect_uri' => $this->client_redirect_url,
+        'grant_type' => 'refresh_token',
+        'refresh_token' => $token,
+      );
+
+      $result = $this->post($this->access_token_url, $params);
+
+      if (isset($result['access_token'])) {
+        $this->access_token = $result['access_token'];
+      }
+
+      return $result;
+    }
+
     public function get($resource, $params = array()) {
       return $this->oAuthRequest('GET', $resource, $params);
     }
