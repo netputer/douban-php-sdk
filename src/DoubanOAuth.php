@@ -69,6 +69,10 @@
       return $result;
     }
 
+    public function setAccessToken($token) {
+      $this->access_token = $token;
+    }
+
     public function get($resource, $params = array()) {
       return $this->oAuthRequest('GET', $resource, $params);
     }
