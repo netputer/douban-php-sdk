@@ -115,7 +115,12 @@
       switch ($method) {
         case 'GET':
         case 'DELETE':
-          $url = $url . '?' . http_build_query($params);
+          $query_str = http_build_query($params);
+
+          if (!empty($query_str)) {
+            $url .= '?' . $query_str;
+          }
+
           return $this->http($method, $url);
       }
 
